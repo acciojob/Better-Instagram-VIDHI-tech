@@ -1,4 +1,3 @@
-//your code here
 // Get the draggable elements
 const images = document.querySelectorAll('.image');
 
@@ -40,7 +39,7 @@ function drop(e) {
 
     // Swap the image content
     const draggedData = e.dataTransfer.getData('text/html');
-    const droppedData = currentImage.innerHTML;
+    const droppedData = e.target.innerHTML;
     e.target.innerHTML = draggedData;
     currentImage.innerHTML = droppedData;
 }
